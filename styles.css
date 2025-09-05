@@ -113,7 +113,8 @@ img {
   height: auto;
   transition: transform 0.2s;
 }
-img:hover{
+
+img:hover {
   transform: scale(1.25);
 }
 
@@ -207,11 +208,13 @@ img:hover{
   color: var(--text-color);
   font-weight: var(--font-medium);
 }
+
 .nav__img {
   width: 40px;
   border-radius: 5rem;
   justify-self: center;
 }
+
 .nav__logo:hover {
   color: var(--first-color);
 }
@@ -292,6 +295,7 @@ img:hover{
   color: var(--title-color);
   margin-bottom: var(--mb-4);
 }
+
 .home__img {
   width: 300px;
   justify-self: center;
@@ -317,13 +321,20 @@ img:hover{
 }
 
 .about__description {
-  margin-bottom: var(--mb-3);
+  text-align: justify;
+  text-justify: inter-word;
+  /* adds spacing between words for clean edges */
 }
 
 .about__img {
   width: 280px;
   border-radius: 0.5rem;
   justify-self: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+  /* Prevents breaking "Mechanical Engineering" */
 }
 
 /*========== EDUCATION ==========*/
@@ -342,9 +353,11 @@ img:hover{
   fill: var(--first-color);
   margin-bottom: var(--mb-2);
 }
+
 .nav__logo:hover {
   color: var(--first-color);
 }
+
 .education__title {
   font-size: var(--h3-font-size);
   color: var(--title-color);
@@ -360,65 +373,209 @@ img:hover{
 .education__description {
   padding: 0 1.5rem;
 }
+
 .education__span {
   display: block;
 }
 
-/*========== SKILL ==========*/
-.skills__container {
+/*========== EXPERIENCE ==========*/
+.experience__container {
   row-gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.experience__content {
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--first-color);
+  background: var(--container-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.1);
+}
+
+.experience__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.experience__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  display: block;
+  margin-bottom: var(--mb-1);
+}
+
+.experience__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* ==================== SKILLS SECTION ==================== */
+.skills {
+  padding: 4rem 0;
+}
+
+.skills .section-subtitle {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
   text-align: center;
 }
+
+.skills .section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Grid for skills */
+.bd-grid-skill {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns in 1 row */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Each skill item */
 .skills__data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  font-weight: var(--font-semi);
-  padding: 0.5rem 1rem;
-  margin-bottom: var(--mb-4);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  background: var(--container-color, #fff);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.skills__icon {
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
-}
+
+/* Flex inside skill name */
 .skills__names {
   display: flex;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
+
+.skills__icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--first-color, #007bff);
+}
+
+.skills__name {
+  font-weight: 600;
+}
+
+/* Progress bar */
 .skills__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
-  height: 0.25rem;
+  width: 100%;
+  height: 8px;
+  background: #e4e4e4;
   border-radius: 0.5rem;
-  z-index: var(--z-back);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
 }
-.skills__cpp {
+
+.skills__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--first-color, #007bff);
+  width: 0;
+  transition: width 1.5s ease;
+}
+
+/* Skill levels */
+/* Progress widths */
+.skills__cpp::after {
   width: 80%;
 }
-.skills__html {
+
+.skills__html::after {
   width: 95%;
 }
-.skills__css {
+
+.skills__css::after {
   width: 75%;
 }
-.skills__js {
+
+.skills__js::after {
   width: 65%;
 }
-.skills__flutter {
-  width: 85%;
+
+.skills__ts::after {
+  width: 60%;
 }
-.skills__figma {
+
+.skills__tailwind::after {
+  width: 70%;
+}
+
+.skills__react::after {
+  width: 80%;
+}
+
+.skills__node::after {
   width: 75%;
 }
-.skills__img {
-  border-radius: 1rem;
+
+.skills__django::after {
+  width: 65%;
 }
+
+.skills__mongo::after {
+  width: 70%;
+}
+
+.skills__mysql::after {
+  width: 75%;
+}
+
+.skills__postgres::after {
+  width: 65%;
+}
+
+
+/* Percentage */
+.skills__percentage {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: right;
+  color: var(--text-color, #333);
+}
+
+/* Image box */
+.skills__img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .bd-grid-skill {
+    grid-template-columns: 1fr 1fr;
+    /* 2 cols on tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bd-grid-skill {
+    grid-template-columns: 1fr;
+    /* stack on small screens */
+  }
+}
+
+
 
 /*========== Competitive Programming ==========*/
 .prog__data {
@@ -443,28 +600,115 @@ img:hover{
   justify-self: center;
 }
 
-/*========== APP ==========*/
-.app__data {
+/*========== LEETCODE ==========*/
+.leetcode__container {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.leetcode__data {
   text-align: center;
 }
 
-.app__description {
+.leetcode__description {
   margin-bottom: var(--mb-5);
 }
 
-.app__stores {
-  margin-bottom: var(--mb-4);
-}
-
-.app__store {
-  width: 120px;
-  margin: 0 var(--mb-1);
-}
-
-.app__img {
-  width: 230px;
+.leetcode__img {
+  width: 350px;
+  /* bigger like CP/WebDev images */
   justify-self: center;
+  border-radius: 0.5rem;
 }
+
+/*========== PROJECT CARDS ==========*/
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.projects__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.projects__content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.projects__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.projects__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+
+/*========== MODAL STYLES ==========*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--container-color);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+.close {
+  color: var(--title-color);
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 /*========== CONTACT ==========*/
 .contact__container {
@@ -515,9 +759,11 @@ img:hover{
 .footer__link:hover {
   color: var(--first-color);
 }
+
 #footer__ref:hover {
   transform: scale(1.5);
 }
+
 .footer__copy {
   text-align: center;
   font-size: var(--small-font-size);
@@ -527,6 +773,7 @@ img:hover{
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px) {
+
   .home__container,
   .about__container,
   .app__container,
@@ -557,10 +804,12 @@ img:hover{
     grid-template-columns: 1.75fr 1fr;
     align-items: center;
   }
+
   .contact__button {
     justify-self: center;
   }
 }
+
 @media screen and (min-width: 768px) {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
@@ -581,13 +830,16 @@ img:hover{
   .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
+
   .nav__list {
     display: flex;
   }
+
   .nav__item {
     margin-left: var(--mb-5);
     margin-bottom: 0;
   }
+
   .nav__toggle {
     display: none;
   }
@@ -609,6 +861,7 @@ img:hover{
   .app__store {
     margin: 0 var(--mb-1) 0 0;
   }
+
   .prog__store {
     margin: 0 var(--mb-1) 0 0;
   }
@@ -626,7 +879,7 @@ img:hover{
 
   .about__container,
   .app__container,
-  .prog__container{
+  .prog__container {
     column-gap: 7rem;
   }
 }
