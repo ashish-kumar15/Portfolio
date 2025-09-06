@@ -301,6 +301,13 @@ img:hover {
   justify-self: center;
 }
 
+.home__tagline {
+  margin: 10px 0 20px;
+  font-weight: 500;
+  color: #555;
+  font-size: 1.1rem;
+}
+
 /*========== BUTTONS ==========*/
 .button {
   display: inline-block;
@@ -770,6 +777,32 @@ img:hover {
   color: var(--text-color-light);
   margin-top: 3.5rem;
 }
+
+.leetcode-icon {
+  display: inline-block;
+  width: 20px;
+  /* match font icons better */
+  height: 20px;
+  vertical-align: middle;
+  /* keep aligned with others */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: -2px;
+  /* slight baseline adjustment */
+}
+
+.social-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* .leetcode-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0);
+  /* optional hover effect */
+/* } */
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px) {

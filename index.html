@@ -8,6 +8,7 @@
     <!--========== BOX ICONS ==========-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/46629fd88a.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
 
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="styles.css">
@@ -32,8 +33,10 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
                     <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="contactform.html" target="_blank" class="nav__link">Contact</a></li>
 
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
@@ -53,10 +56,15 @@
                 <div class="home__data">
                     <p class="about__description">Welcome To My Website</p>
                     <h2 class="home__subtitle">Hi,<br> I am <span class="home__title">Ashish</span></h2>
+                    <!-- New tagline / short description -->
+                    <p class="home__tagline">
+                        Full-Stack Developer | Competitive Programmer | Tech Enthusiast
+                    </p>
+
                     <a href="#about" class="button">About Me</a>
                 </div>
 
-                <img src="DSC_0253.JPG" alt="" class="home__img">
+                <img src="img/me.png" alt="" class="home__img">
             </div>
         </section>
 
@@ -82,8 +90,7 @@
                     <a href="#projects" class="button">Explore My Work</a>
                 </div>
 
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnI5BvtR3A2c4TnOO6XoHvpaHqX49ZpdtHTQ&s"
-                    alt="" class="about__img">
+                <img src="img/iitgg.png" alt="" class="about__img">
             </div>
         </section>
 
@@ -96,8 +103,7 @@
 
             <div class="education__container  bd-grid">
                 <div class="education__content">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnI5BvtR3A2c4TnOO6XoHvpaHqX49ZpdtHTQ&s"
-                        class="education__img">
+                    <img src="img/iitgg.png" class="education__img">
                     <h3 class="education__title">IIT GUWAHATI
                     </h3>
                     <span class="section-subtitle education__small">OCT 2022 - Present</span>
@@ -115,8 +121,7 @@
                         data they need in appropriate ways.</p>
                 </div>
                 <div class="education__content">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*fHrAZJ1_L0Ff9dvVexL5_A.png"
-                        class="education__img">
+                    <img src="img/web.png" class="education__img">
                     <h3 class="education__title">Web Development</h3>
                     <span class="section-subtitle education__small">March 2023 - Present</span>
                     <p class="education__description">Websites promote you 24/7 :
@@ -162,9 +167,9 @@
             </span>
             <h2 class="section-title">Skill and confidence are unconquered army.</h2>
 
-            <div class="skills__container bd-grid-skill">
+            <div class="skills__container bd-grid-skill ">
                 <!-- Left Column -->
-                <div>
+                <div class="skill__content">
                     <div class="skills__data skills__content">
                         <div class="skills__names">
                             <i class='bx bx-code-alt skills__icon'></i>
@@ -221,7 +226,7 @@
                 </div>
 
                 <!-- Right Column -->
-                <div>
+                <div class="skill__content">
                     <div class="skills__data skills__content">
                         <div class="skills__names">
                             <i class='bx bxl-react skills__icon'></i>
@@ -291,14 +296,14 @@
                     <h2 class="section-title prog__initial">Avid Coder On Codeforces with a max. rating of <b>1680</b>
                     </h2>
                     <p class="prog__description">Find me there, connect for any queries.</p>
-                    <a href="https://codeforces.com/profile/ashish_kumar15" target="_blank"
-                        class="button">CodeForces</a>
+                    <a href="https://codeforces.com/profile/ashish_kumar15" target="_blank" class="button">CodeForces
+                        Profile</a>
                 </div>
-                <img src="cp.jpeg" alt="" class="prog__img">
+                <img src="img/cp.png" alt="" class="prog__img">
             </div>
         </section>
 
-        <!--===== APP DEVELOPMENT=======-->
+        <!--===== Leetcode======-->
         <section class="prog section bd-container">
             <div class="prog__container bd-grid">
                 <div class="prog__data"> <span class="ection-subtitle prog__initial">
@@ -326,7 +331,7 @@
                     <p class="prog__description">Connect me on freelancer.com for any work related to Websites.</p>
                     <a href="https://www.freelancer.in/login" class="button">Freelancer</a>
                 </div>
-                <img src="webdev.jpg" alt="" class="prog__img">
+                <img src="img/web.png" alt="" class="prog__img">
             </div>
         </section>
         <!--========== PROJECTS ==========-->
@@ -383,7 +388,7 @@
                     and performance-based rewards using <b>JWT</b>, <b>React</b>, and <b>Tailwind CSS</b>.<br>
                     -Implemented a smart skill-matching engine with <b>RESTful APIs</b> in <b>Node.js/Express.js</b>.
                     Enabled PDF reporting, <b>Stripe</b> integration, and <b>Cloudinary</b> media handling.</p>
-                <a href="https://github.com/ashish-iitg/companygrow" target="_blank" class="button">GitHub Repo</a>
+                <a href="https://github.com/ashish-kumar15/CompanyGrow" target="_blank" class="button">GitHub Repo</a>
             </div>
         </div>
 
@@ -459,7 +464,7 @@
                     – Integrated external weather <strong>APIs</strong> to fetch and display real-time data with a
                     clean, responsive UI.
                 </p>
-                <a href="https://github.com/ashish-kumar15/weather-web-app" target="_blank" rel="noopener"
+                <a href="https://github.com/ashish-kumar15/Weather-Application" target="_blank" rel="noopener"
                     class="button">GitHub Repo</a>
                 <a href="https://ashish-kumar15.github.io/weather-web-app" target="_blank" rel="noopener"
                     class="button">Live Demo</a>
@@ -520,11 +525,12 @@
             <div class="footer__content">
                 <h3 class="footer__title" id="Program">Programming</h3>
                 <div>
-                    <a href="https://codeforces.com" target="_blank" class="footer__social"><i
+                    <a href="https://codeforces.com/profile/ashish_kumar15" target="_blank" class="footer__social"><i
                             class="fa fa-poll"></i></a>
-                    <a href="https://codeforces.com" target="_blank" class="footer__social"><i
-                            class="fas fa-closed-captioning"></i></a>
-                    <a href="https://github.com/ashish-iitg" target="_blank" class="footer__social"><i
+                    <a href="https://leetcode.com/u/ashish_kumar15/" target="_blank" class="footer__social">
+                        <i class="leetcode-icon"></i>
+                    </a>
+                    <a href="https://github.com/ashish-kumar15" target="_blank" class="footer__social"><i
                             class="bx bxl-github"></i></a>
                     <!-- <a href="#home" target="_blank" class="footer__social"><i class="bx bxl-play-store"></i></a> -->
                 </div>
