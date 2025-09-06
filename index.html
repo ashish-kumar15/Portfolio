@@ -139,25 +139,53 @@
             <h2 class="section-title">Where I've Worked</h2>
 
             <div class="experience__container bd-grid">
-                <div class="experience__content">
-                    <h3 class="experience__title">Honda Motorcycle & Scooter India Pvt. Ltd.</h3>
-                    <span class="experience__subtitle">I.T Division Intern (May 2025 - July 2025)</span>
-                    <p class="experience__description">
-                        Worked on <b>MES-SAP integration</b>, designed flow diagrams,
-                        SQL schemas, and drafted API specifications for real-time tracking.
-                    </p>
+
+                <!-- Experience 1 -->
+                <div class="experience__card">
+                    <div class="experience__header" onclick="toggleExperience(this)">
+                        <img src="./img/honda.png" alt="Honda" class="experience__logo">
+                        <div>
+                            <h3 class="experience__title">Honda Motorcycle & Scooter India Pvt. Ltd.</h3>
+                            <span class="experience__subtitle">I.T Division Intern (May 2025 - July 2025)</span>
+                            <p class="experience__brief">Worked on MES-SAP integration and system design.</p>
+                        </div>
+                    </div>
+                    <div class="experience__details">
+                        <p>
+                            During my internship at Honda, I worked on <b>MES-SAP integration</b>.
+                            I designed detailed flow diagrams, created SQL schemas for efficient data tracking,
+                            and drafted API specifications enabling real-time communication between MES, SAP, and
+                            shop-floor systems.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="experience__content">
-                    <h3 class="experience__title">Alcheringa, IIT Guwahati</h3>
-                    <span class="experience__subtitle">Head, Rock-o-Phonix (June 2024 - May 2025)</span>
-                    <p class="experience__description">
-                        Managed a national-level rock competition with <b>150+ participants</b>
-                        and an audience of <b>1000+</b>. Also handled hospitality for 500+ participants.
-                    </p>
+                <!-- Experience 2 -->
+                <div class="experience__card">
+                    <div class="experience__header" onclick="toggleExperience(this)">
+                        <img src="img/alcher.png" alt="Alcheringa" class="experience__logo">
+                        <div>
+                            <h3 class="experience__title">Alcheringa, IIT Guwahati</h3>
+                            <span class="experience__subtitle">Head, Rock-o-Phonix (June 2024 - May 2025)</span>
+                            <p class="experience__brief">Led a flagship music competition with 150+ participants.</p>
+                        </div>
+                    </div>
+                    <div class="experience__details">
+                        <p>
+                            As Head of Rock-o-Phonix, I managed one of the largest rock competitions in North-East India
+                            with <b>150+ participants</b> and an audience of <b>1000+</b>.
+                            I was also responsible for <b>hospitality of 500+ participants</b>, ensuring smooth
+                            logistics,
+                            and coordinating with technical and event management teams.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </section>
+
+
+
 
         <!--========== SKILL ==========-->
 
@@ -389,6 +417,7 @@
                     -Implemented a smart skill-matching engine with <b>RESTful APIs</b> in <b>Node.js/Express.js</b>.
                     Enabled PDF reporting, <b>Stripe</b> integration, and <b>Cloudinary</b> media handling.</p>
                 <a href="https://github.com/ashish-kumar15/CompanyGrow" target="_blank" class="button">GitHub Repo</a>
+                <a href="https://company-grow-i5ta.vercel.app" target="_blank" class="button">Website</a>
             </div>
         </div>
 
@@ -446,10 +475,10 @@
                     – Implemented <strong>Bubble</strong>, <strong>Selection</strong>, <strong>Insertion</strong>,
                     <strong>Merge</strong>, <strong>Quick</strong>, and <strong>Heap</strong> sort.
                 </p>
-                <a href="https://github.com/ashish-kumar15/sorting-visualizer" target="_blank" rel="noopener"
+                <a href="https://github.com/ashish-kumar15/Sorting_Visualiserr" target="_blank" rel="noopener"
                     class="button">GitHub Repo</a>
-                <a href="https://ashish-kumar15.github.io/sorting-visualizer" target="_blank" rel="noopener"
-                    class="button">Live Demo</a>
+                <a href="https://sorting-visualizer-lac-delta.vercel.app/" target="_blank" rel="noopener"
+                    class="button">Website</a>
             </div>
         </div>
 
@@ -466,8 +495,8 @@
                 </p>
                 <a href="https://github.com/ashish-kumar15/Weather-Application" target="_blank" rel="noopener"
                     class="button">GitHub Repo</a>
-                <a href="https://ashish-kumar15.github.io/weather-web-app" target="_blank" rel="noopener"
-                    class="button">Live Demo</a>
+                <a href="https://ashish-kumar15.github.io/Weather-Application/" target="_blank" rel="noopener"
+                    class="button">Website</a>
             </div>
         </div>
 
@@ -545,6 +574,12 @@
 
     <!--========== MAIN JS ==========-->
     <script src="main.js"></script>
+    <script>
+        function toggleExperience(el) {
+            let card = el.parentElement;
+            card.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

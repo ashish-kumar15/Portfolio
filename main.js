@@ -100,7 +100,7 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__data, .home__img,
             .about__data, .about__img,
-            .education__content, .skills__content,
+            .education__content, .skills__content, .exprerience__content,
             .projects__content,    /* ✅ added projects */
             .app__data, .app__img,
             .prog__data, .prog__img,

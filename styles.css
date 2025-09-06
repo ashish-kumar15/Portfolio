@@ -405,6 +405,67 @@ img:hover {
   color: var(--title-color);
 }
 
+.experience__card {
+  background: var(--container-color);
+  /* instead of #fff */
+  color: var(--text-color);
+  /* instead of #444 */
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.experience__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.experience__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 5px;
+}
+
+.experience__title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.experience__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  /* instead of #666 */
+}
+
+/* .experience__brief {
+  color: var(--text-color);
+  margin-top: 0.5rem;
+} */
+.experience__brief,
+.experience__details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.experience__card.active .experience__details {
+  max-height: 500px;
+  /* adjust depending on content length */
+  opacity: 1;
+}
+
+
+
+
 .experience__subtitle {
   font-size: var(--small-font-size);
   color: var(--first-color);
@@ -638,17 +699,16 @@ img:hover {
 }
 
 .projects__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
+  background: var(--container-color);
+  /* instead of #fff */
+  color: var(--text-color);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s, color 0.3s;
   cursor: pointer;
 }
+
 
 .projects__content:hover {
   transform: translateY(-5px);
@@ -666,6 +726,8 @@ img:hover {
 .projects__title {
   font-size: 1.2rem;
   font-weight: 600;
+  color: var(--title-color);
+  /* use variable */
   text-align: center;
 }
 
