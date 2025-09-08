@@ -690,6 +690,71 @@ img:hover {
   border-radius: 0.5rem;
 }
 
+/*========== certificates CARDS ==========*/
+/* Certificates Container */
+.cert__container {
+  row-gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* Card style */
+.cert__card {
+  background: var(--container-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cert__card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card header (logo + text) */
+.cert__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  /* square shape */
+  background: #f9f9f9;
+  padding: 5px;
+}
+
+.cert__title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cert__issuer {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  display: block;
+}
+
+.cert__date {
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.cert__skills {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+}
+
+
 /*========== PROJECT CARDS ==========*/
 .projects__container {
   display: grid;
